@@ -18,7 +18,7 @@ class FitnessClass(models.Model):
 	total_slots = models.IntegerField()
 	available_slots = models.IntegerField()
 
-	def __str__():
+	def __str__(self):
 		return (f"{self.class_name} class taken by {self.instructor}")
 
 
@@ -31,6 +31,6 @@ class Booking(models.Model):
 	customer_name = models.CharField(max_length=120)
 	customer_email = models.EmailField()
 
-	def __str__():
+	def __str__(self):
 		return (f"{self.customer_name} booked for a {self.class_name} class")
 

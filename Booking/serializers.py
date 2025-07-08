@@ -6,7 +6,7 @@ class FitnessClassSerializer(serializers.ModelSerializer):
 		model = FitnessClass
 		fields = '__all__'
 
-class Booking(serializers.ModelSerializer):
+class BookingSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = Booking
 		fields = "__all__"
