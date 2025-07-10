@@ -21,6 +21,7 @@ Django Restframework
 
 Get available classes
 > curl -X GET http://127.0.0.1:8000/api/classes/
+
 > curl -X GET "http://127.0.0.1:8000/api/classes/?timezone=Europe/London"
 
 Book a class
