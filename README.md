@@ -1,6 +1,5 @@
 # Tech Stack:
-Python,
-Django Restframework
+Python, Django Restframework
 
 # Setup:
 - Clone the repo using the below command
