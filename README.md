@@ -20,8 +20,8 @@ Django Restframework
 # Sample API usage using CURL
 
 Get available classes
-curl -X GET http://127.0.0.1:8000/api/classes/
-curl -X GET "http://127.0.0.1:8000/api/classes/?timezone=Europe/London"
+> curl -X GET http://127.0.0.1:8000/api/classes/
+> curl -X GET "http://127.0.0.1:8000/api/classes/?timezone=Europe/London"
 
 Book a class
 > curl -X POST http://127.0.0.1:8000/api/book/ ^
