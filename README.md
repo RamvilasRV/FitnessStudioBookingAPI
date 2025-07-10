@@ -24,11 +24,22 @@ Django Restframework
 
 Curl for testing
 
-classes
+Get classes
 curl -X GET http://127.0.0.1:8000/api/classes/
 
+curl -X GET "http://127.0.0.1:8000/api/classes/?timezone=Europe/London"
 
-book
-curl -X POST http://127.0.0.1:8000/api/book/ \
-     -H "Content-Type: application/json" \
-     -d '{"fitness_class": 1, "customer_name": "Guy", "customer_email": "guy@example.com"}'
+
+book a class
+curl -X POST http://127.0.0.1:8000/api/book/ ^
+  -H "Content-Type: application/json" ^
+  -d "{\"fitness_class\": 1, \"customer_name\": \"shiv\", \"customer_email\": \"shiv@test.com\"}"
+
+curl -X POST http://127.0.0.1:8000/api/book/ ^
+  -H "Content-Type: application/json" ^
+  -d "{\"fitness_class\": 3, \"customer_name\": \"shiv\", \"customer_email\": \"shiv@test.com\"}"
+
+
+Get the list of classes booked.
+curl -X GET "http://127.0.0.1:8000/api/bookings/?email=shiv@test.com"
+

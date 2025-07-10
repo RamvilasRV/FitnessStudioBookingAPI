@@ -45,7 +45,7 @@ class BookingView(APIView):
 		else:
 			selected_class = serializer_class.validated_data["fitness_class"]
 
-		if selected_class.available_slots<0:
+		if selected_class.available_slots<=0:
 			return Response({"error":"Slots are not available for this class"})
 		else:
 			serializer_class.save()
