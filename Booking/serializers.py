@@ -7,6 +7,8 @@ class FitnessClassSerializer(serializers.ModelSerializer):
 		fields = '__all__'
 
 class BookingSerializer(serializers.ModelSerializer):
+	fitness_class = serializers.PrimaryKeyRelatedField(queryset=FitnessClass.objects.all())
+
 	class Meta:
 		model = Booking
 		fields = "__all__"

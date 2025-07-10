@@ -32,5 +32,5 @@ class Booking(models.Model):
 	customer_email = models.EmailField()
 
 	def __str__(self):
-		return (f"{self.customer_name} booked for a {self.class_name} class")
+		return (f"{self.customer_name} booked for a {self.fitness_class.class_name} class")
 
